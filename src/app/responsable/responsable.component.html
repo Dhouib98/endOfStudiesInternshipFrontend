@@ -1,0 +1,39 @@
+<div class="responsable-container">
+  <!-- Profile Section -->
+  <section class="profile">
+    <h2>{{ nom }} {{ prenom }}</h2>
+  </section>
+
+  <!-- Search Bar -->
+  <section class="search">
+    <input 
+      type="text" 
+      class="form-control" 
+      placeholder="Search products..." 
+      [(ngModel)]="searchQuery" 
+    />
+    <button (click)="searchProduct()">Search</button>
+  </section>
+
+  <!-- Search Results -->
+  <section class="search-results mt-4">
+    <div *ngIf="products.length > 0">
+      <h3>Search Results:</h3>
+      <ul class="list-group">
+        <li *ngFor="let product of products" class="list-group-item">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h5 class="product-name">{{ product.nom }}</h5>
+              <p class="product-description">{{ product.description }}</p>
+            </div>
+            <img [src]="product.image" alt="{{ product.nom }}" class="product-image" />
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="products.length === 0 && searchQuery">
+      <p>No products found.</p>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,11 @@
+<ng-container *ngIf="role === 'vendeur'">
+    <app-vendeur></app-vendeur>
+  </ng-container>
+  
+  <ng-container *ngIf="role === 'responsable'">
+    <app-responsable></app-responsable>
+  </ng-container>
+  
+  <ng-container *ngIf="role === '' || role === 'not found'">
+    <p>Role not found or user not authenticated.</p>
+  </ng-container>

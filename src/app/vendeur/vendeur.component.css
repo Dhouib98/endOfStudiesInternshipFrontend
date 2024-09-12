@@ -1,0 +1,43 @@
+.vendeur-container {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .profile {
+    text-align: center;
+  }
+  
+  .profile-photo {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .search input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .products ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .products li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ff9999;
+    border-radius: 5px;
+  }
+  
+  .in-stock {
+    color: green;
+  }
+  
+  .out-of-stock {
+    color: red;
+  }
+  
